@@ -1,54 +1,40 @@
 open class Layer {
-  source: String? id: String?
-  `source-layer`: String? = id
-  type: String? maxzoom: Int? minzoom: Int?
-  paint {} layout {}
+  source: String? id: String? `source-layer`: String? = id type: String?
+  maxzoom: Int? minzoom: Int? paint {} layout {}
 }
 
 class Line extends Layer {
-  source: "a"
-  type = "line"
-  z = new Listing { 10 0.2 18 1 }
-  hidden c = "#f0f"
+  source: "a" type = "line" hidden c = "#f0f"
+  hidden z = new Listing { 10 0.2 18 1 }
   paint {
     `line-width` = new Listing { "interpolate"
-      new Listing { "linear" }
-      new Listing { "zoom" }
-      z[0] z[1]
-      z[2] z[3]
+      new Listing { "linear" } new Listing { "zoom" }
+      z[0] z[1] z[2] z[3]
     }
     `line-color` = c
   }
 }
 
 class Fill extends Layer {
-  source: "a"
-  type = "fill"
+  source: "a" type = "fill" hidden c = "#f0f"
   hidden z = new Listing { 10 0.2 18 1 }
-  hidden c = "#f0f"
   paint {
     `fill-opacity` = new Listing { "interpolate" 
-      new Listing { "linear" }
-      new Listing { "zoom" }
-      z[0] z[1]
-      z[2] z[3]
+      new Listing { "linear" } new Listing { "zoom" }
+      z[0] z[1] z[2] z[3]
     }
     `fill-color` = c
   }
 }
 
 class FillExtrusion extends Layer {
-  source: "a"
-  type = "fill-extrusion"
-  hidden c = "#dcdcdc"
+  source: "a" type = "fill-extrusion" hidden c = "#dcdcdc"
   hidden z = new Listing { 16 0 19 10 }
   paint {
     `fill-extrusion-color` = c
     `fill-extrusion-height` = new Listing { "interpolate"
-      new Listing { "linear" }
-      new Listing { "zoom" }
-      z[0] z[1]
-      z[2] z[3]
+      new Listing { "linear" } new Listing { "zoom" }
+      z[0] z[1] z[2] z[3]
     }
   }
 }
@@ -67,17 +53,12 @@ sources {
 }
 layers = new Listing {
   new Background { c = "#f8f9fa" }
-  new Fill { id = "Laut" c = "#96c8b4"
-    z = new Listing { 15 0 20 1 } }
-  new Line { id = "Batas Pantai" c = "#0000c8"
-    z = new Listing { 13 0.2 20 1 } }
+  new Fill { id = "Laut" c = "#96c8b4" z = new Listing { 15 0 20 1 } }
+  new Line { id = "Batas Pantai" c = "#0000c8" z = new Listing { 13 0.2 20 1 } }
   new Line { id = "Dermaga" c = "#8b4513" }
-  new Line { id = "Jalan Aspal" c = "#969696"
-    z = new Listing { 13 0.2 17 1 } }
+  new Line { id = "Jalan Aspal" c = "#969696" z = new Listing { 13 0.2 17 1 } }
   new Line { id = "Alur" c = "#649678" }
-  new Fill { id = "Bangunan2D" maxzoom = 16
-    `source-layer` = "Bangunan" c = "#dcdcdc"
-    z = new Listing { 15 0 16 1 } }
-  new FillExtrusion { id = "Bangunan3D" minzoom = 16
-    `source-layer` = "Bangunan" }
+  new Fill { id = "Bangunan2D" `source-layer` = "Bangunan" maxzoom = 16
+    c = "#dcdcdc" z = new Listing { 15 0 16 1 } }
+  new FillExtrusion { id = "Bangunan3D" `source-layer` = "Bangunan" minzoom = 16 s}
 }
