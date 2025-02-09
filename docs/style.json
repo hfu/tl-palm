@@ -86,6 +86,52 @@
     },
     {
       "source": "a",
+      "id": "Jalan Tanah",
+      "source-layer": "Jalan Tanah",
+      "type": "line",
+      "paint": {
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          18,
+          1
+        ],
+        "line-color": "#cd853f"
+      },
+      "layout": {}
+    },
+    {
+      "source": "a",
+      "id": "Japan Setapak",
+      "source-layer": "Japan Setapak",
+      "type": "line",
+      "paint": {
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          18,
+          1
+        ],
+        "line-color": "#f0e68c"
+      },
+      "layout": {}
+    },
+    {
+      "source": "a",
       "id": "Jalan Aspal",
       "source-layer": "Jalan Aspal",
       "type": "line",

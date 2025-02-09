@@ -56,9 +56,11 @@ layers = new Listing {
   new Fill { id = "Laut" c = "#96c8b4" z = new Listing { 15 0 20 1 } }
   new Line { id = "Batas Pantai" c = "#0000c8" z = new Listing { 13 0.2 20 1 } }
   new Line { id = "Dermaga" c = "#8b4513" }
+  new Line { id = "Jalan Tanah" c = "#cd853f" }
+  new Line { id = "Japan Setapak" c = "#f0e68c" }
   new Line { id = "Jalan Aspal" c = "#969696" z = new Listing { 13 0.2 17 1 } }
   new Line { id = "Alur" c = "#649678" }
   new Fill { id = "Bangunan2D" `source-layer` = "Bangunan" maxzoom = 16
     c = "#dcdcdc" z = new Listing { 15 0 16 1 } }
-  new FillExtrusion { id = "Bangunan3D" `source-layer` = "Bangunan" minzoom = 16 s}
+  new FillExtrusion { id = "Bangunan3D" `source-layer` = "Bangunan" minzoom = 16 }
 }
