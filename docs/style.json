@@ -10,27 +10,17 @@
     {
       "id": "background",
       "type": "background",
+      "c": "#f8f9fa",
       "paint": {
-        "background-color": [
-          "rgb",
-          248,
-          249,
-          250
-        ]
+        "background-color": "#f8f9fa"
       }
     },
     {
-      "id": "laut",
       "source": "a",
+      "id": "Laut",
       "source-layer": "Laut",
       "type": "fill",
       "paint": {
-        "fill-color": [
-          "rgb",
-          150,
-          200,
-          180
-        ],
         "fill-opacity": [
           "interpolate",
           [
@@ -43,21 +33,17 @@
           0,
           20,
           1
-        ]
-      }
+        ],
+        "fill-color": "#96c8b4"
+      },
+      "layout": {}
     },
     {
-      "id": "batas-pantai",
       "source": "a",
+      "id": "Batas Pantai",
       "source-layer": "Batas Pantai",
       "type": "line",
       "paint": {
-        "line-color": [
-          "rgb",
-          0,
-          0,
-          200
-        ],
         "line-width": [
           "interpolate",
           [
@@ -70,21 +56,52 @@
           0.2,
           20,
           1
-        ]
-      }
+        ],
+        "line-color": "#0000c8"
+      },
+      "layout": {},
+      "z": [
+        13,
+        0.2,
+        20,
+        1
+      ]
     },
     {
-      "id": "jalan-aspal",
       "source": "a",
+      "id": "Dermaga",
+      "source-layer": "Dermaga",
+      "type": "line",
+      "paint": {
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.2,
+          18,
+          1
+        ],
+        "line-color": "#8b4513"
+      },
+      "layout": {},
+      "z": [
+        10,
+        0.2,
+        18,
+        1
+      ]
+    },
+    {
+      "source": "a",
+      "id": "Jalan Aspal",
       "source-layer": "Jalan Aspal",
       "type": "line",
       "paint": {
-        "line-color": [
-          "rgb",
-          150,
-          150,
-          150
-        ],
         "line-width": [
           "interpolate",
           [
@@ -97,21 +114,23 @@
           0.2,
           17,
           1
-        ]
-      }
+        ],
+        "line-color": "#969696"
+      },
+      "layout": {},
+      "z": [
+        13,
+        0.2,
+        17,
+        1
+      ]
     },
     {
-      "id": "alur",
       "source": "a",
+      "id": "Alur",
       "source-layer": "Alur",
       "type": "line",
       "paint": {
-        "line-color": [
-          "rgb",
-          100,
-          150,
-          120
-        ],
         "line-width": [
           "interpolate",
           [
@@ -120,26 +139,28 @@
           [
             "zoom"
           ],
-          13,
-          0.1,
-          20,
+          10,
+          0.2,
+          18,
           1
-        ]
-      }
+        ],
+        "line-color": "#649678"
+      },
+      "layout": {},
+      "z": [
+        10,
+        0.2,
+        18,
+        1
+      ]
     },
     {
-      "id": "bangunan-2d",
       "source": "a",
+      "id": "Bangunan2D",
       "source-layer": "Bangunan",
       "type": "fill",
       "maxzoom": 16,
       "paint": {
-        "fill-color": [
-          "rgb",
-          220,
-          220,
-          220
-        ],
         "fill-opacity": [
           "interpolate",
           [
@@ -152,22 +173,19 @@
           0,
           16,
           1
-        ]
-      }
+        ],
+        "fill-color": "#dcdcdc"
+      },
+      "layout": {}
     },
     {
-      "id": "bangunan-3d",
       "source": "a",
+      "id": "Bangunan3D",
       "source-layer": "Bangunan",
       "type": "fill-extrusion",
       "minzoom": 16,
       "paint": {
-        "fill-extrusion-color": [
-          "rgb",
-          220,
-          220,
-          220
-        ],
+        "fill-extrusion-color": "#dcdcdc",
         "fill-extrusion-height": [
           "interpolate",
           [
@@ -181,7 +199,8 @@
           19,
           10
         ]
-      }
+      },
+      "layout": {}
     }
   ]
 }
