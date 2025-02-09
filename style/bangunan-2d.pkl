@@ -1,0 +1,15 @@
+id = "bangunan-2d"
+source = "a"
+`source-layer` = "Bangunan"
+type = "fill"
+maxzoom = 16
+paint {
+  `fill-color` = new Listing { "rgb" 220 220 220 }
+  `fill-opacity` = new Listing { "interpolate"
+    new Listing { "linear" }
+    new Listing { "zoom" }
+    15 0
+    16 1
+  }
+}
+

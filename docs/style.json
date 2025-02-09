@@ -1,0 +1,187 @@
+{
+  "version": 8,
+  "sources": {
+    "a": {
+      "type": "vector",
+      "url": "pmtiles://https://data.source.coop/smartmaps/cndg-experiment/a.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": [
+          "rgb",
+          248,
+          249,
+          250
+        ]
+      }
+    },
+    {
+      "id": "laut",
+      "source": "a",
+      "source-layer": "Laut",
+      "type": "fill",
+      "paint": {
+        "fill-color": [
+          "rgb",
+          150,
+          200,
+          180
+        ],
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          20,
+          1
+        ]
+      }
+    },
+    {
+      "id": "batas-pantai",
+      "source": "a",
+      "source-layer": "Batas Pantai",
+      "type": "line",
+      "paint": {
+        "line-color": [
+          "rgb",
+          0,
+          0,
+          200
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0.2,
+          20,
+          1
+        ]
+      }
+    },
+    {
+      "id": "jalan-aspal",
+      "source": "a",
+      "source-layer": "Jalan Aspal",
+      "type": "line",
+      "paint": {
+        "line-color": [
+          "rgb",
+          150,
+          150,
+          150
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0.2,
+          17,
+          1
+        ]
+      }
+    },
+    {
+      "id": "alur",
+      "source": "a",
+      "source-layer": "Alur",
+      "type": "line",
+      "paint": {
+        "line-color": [
+          "rgb",
+          100,
+          150,
+          120
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0.1,
+          20,
+          1
+        ]
+      }
+    },
+    {
+      "id": "bangunan-2d",
+      "source": "a",
+      "source-layer": "Bangunan",
+      "type": "fill",
+      "maxzoom": 16,
+      "paint": {
+        "fill-color": [
+          "rgb",
+          220,
+          220,
+          220
+        ],
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          16,
+          1
+        ]
+      }
+    },
+    {
+      "id": "bangunan-3d",
+      "source": "a",
+      "source-layer": "Bangunan",
+      "type": "fill-extrusion",
+      "minzoom": 16,
+      "paint": {
+        "fill-extrusion-color": [
+          "rgb",
+          220,
+          220,
+          220
+        ],
+        "fill-extrusion-height": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          19,
+          10
+        ]
+      }
+    }
+  ]
+}

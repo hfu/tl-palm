@@ -1,0 +1,7 @@
+module sources
+
+a {
+  type = "vector"
+  url = "pmtiles://https://data.source.coop/smartmaps/cndg-experiment/a.pmtiles"
+}
+

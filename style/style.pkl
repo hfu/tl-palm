@@ -1,0 +1,13 @@
+version = 8
+sources = import("sources.pkl")
+layers = new Listing {
+  import("background.pkl")
+  import("laut.pkl")
+  import("batas-pantai.pkl")
+  import("jalan-aspal.pkl")
+
+  import("alur.pkl")
+  import("bangunan-2d.pkl")
+  import("bangunan-3d.pkl")
+}
+

@@ -1,0 +1,15 @@
+id = "bangunan-3d"
+source = "a"
+`source-layer` = "Bangunan"
+type = "fill-extrusion"
+minzoom = 16
+paint {
+  `fill-extrusion-color` = new Listing { "rgb" 220 220 220 }
+  `fill-extrusion-height` = new Listing { "interpolate"
+    new Listing { "linear" }
+    new Listing { "zoom" }
+    16 0
+    19 10
+  }
+}
+

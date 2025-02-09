@@ -1,0 +1,6 @@
+id = "background"
+type = "background"
+paint {
+  `background-color` = new Listing { "rgb" 248 249 250 }
+}
+

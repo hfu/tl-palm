@@ -1,0 +1,14 @@
+id = "jalan-aspal"
+source = "a"
+`source-layer` = "Jalan Aspal"
+type = "line"
+paint {
+  `line-color` = new Listing { "rgb" 150 150 150 }
+  `line-width` = new Listing { "interpolate"
+    new Listing { "linear" }
+    new Listing { "zoom" }
+    13 0.2
+    17 1
+  }
+}
+

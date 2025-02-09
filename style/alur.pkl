@@ -1,0 +1,14 @@
+id = "alur"
+source = "a"
+`source-layer` = "Alur"
+type = "line"
+paint {
+  `line-color` = new Listing { "rgb" 100 150 120 }
+  `line-width` = new Listing { "interpolate"
+    new Listing { "linear" }
+    new Listing { "zoom" }
+    13 0.1
+    20 1
+  }
+}
+
