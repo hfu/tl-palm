@@ -17,7 +17,7 @@ class Line extends Layer {
 
 class Fill extends Layer {
   source: "a" type = "fill" hidden c = "#f0f"
-  hidden z = new Listing { 10 0.2 18 1 }
+  hidden z = new Listing { 15 0 20 1 }
   paint {
     `fill-opacity` = new Listing { "interpolate" 
       new Listing { "linear" } new Listing { "zoom" }
@@ -40,11 +40,19 @@ class FillExtrusion extends Layer {
 }
 
 class Background {
-  id = "background" type = "background" c = "#ff0"
+  id = "background" type = "background"
+  hidden c = "#ff0"
   paint { `background-color` = c }
 }
 
 version = 8
+center = new Listing {
+  125.578778
+  -8.554318 
+}
+zoom = 16.86
+pitch = 60
+bearing = -178.6
 sources {
   a {
     type = "vector"
@@ -53,13 +61,52 @@ sources {
 }
 layers = new Listing {
   new Background { c = "#f8f9fa" }
+  new Fill { id = "Karang" c = "#add8e8" }
+  new Fill { id = "Kebun" c = "#ffffe0" }
+  new Fill { id = "Kilang" c = "#0077cc" }
+  new Fill { id = "Kolam" c = "#87ceeb" }
+  new Fill { id = "Ladang" c = "#a0522d" }
+  new Fill { id = "Landasan" c = "#a0522d" }
   new Fill { id = "Laut" c = "#96c8b4" z = new Listing { 15 0 20 1 } }
+  new Fill { id = "Awan" }
+  new Fill { id = "Bakau" }
+  new Fill { id = "Bandara" c = "#c0c0c0" }
+  new Fill { id = "Belukar" c = "#b0e57c" }
+  new Fill { id = "Gardu Induk" c = "#ffa500" }
+  new Fill { id = "Hutan" c = "#228622" }
+  new Fill { id = "Lapangan" }
+  new Fill { id = "Pasir" c = "#f0e68c" }
+  new Fill { id = "Sawah" c = "#afeeee" }
+  new Fill { id = "TPS" }
+  new Fill { id = "TPU" }
+  new Fill { id = "Taman" }
+  new Fill { id = "Tambang" }
+  new Fill { id = "Tanah Kosong" c = "#d2b48c" }
+  new Fill { id = "Tempat Pemakaman Umum" }
+
+  new Line { id = "Sungai" c = "#4682b4" }
   new Line { id = "Batas Pantai" c = "#0000c8" z = new Listing { 13 0.2 20 1 } }
+  new Line { id = "Garis Pantai" c = "#000080" z = new Listing { 13 0.2 20 1 } }
   new Line { id = "Dermaga" c = "#8b4513" }
+  new Line { id = "Jalan" c = "#008000" }
   new Line { id = "Jalan Tanah" c = "#cd853f" }
   new Line { id = "Japan Setapak" c = "#f0e68c" }
   new Line { id = "Jalan Aspal" c = "#969696" z = new Listing { 13 0.2 17 1 } }
   new Line { id = "Alur" c = "#649678" }
+  new Line { id = "Gorong_Gorong" c = "#4682B4" 
+    paint { `line-dasharray` = new Listing { 4 2 } } }
+  new Line { id = "Danau" c = "#008080" }
+  new Line { id = "Bendungan" c = "#add8e6" }
+  new Line { id = "Jembatan" c = "#808080" z = new Listing { 13 1 17 4 } }
+  new Line { id = "Jalur Sutet" c = "#ff0000" }
+  new Line { id = "Pagar" c = "#008000" z = new Listing { 13 0.4 17 2 } }
+  new Line { id = "Parit" c = "#0000ff" }
+  new Line { id = "Rawa" c = "#add8e6" }
+  new Line { id = "Sutet" c = "#ffa500" }
+  new Line { id = "Tambak" }
+  new Line { id = "Tangga" }
+  new Line { id = "Tower" c = "#ff0000" }
+
   new Fill { id = "Bangunan2D" `source-layer` = "Bangunan" maxzoom = 16
     c = "#dcdcdc" z = new Listing { 15 0 16 1 } }
   new FillExtrusion { id = "Bangunan3D" `source-layer` = "Bangunan" minzoom = 16 }

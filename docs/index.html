@@ -12,18 +12,24 @@ body { margin: 0; padding: 0; }
 <body>
 <div id="map"></div>
 <script> 
-const latlng = [125.578778, -8.554318]
-const zoom = 16.86
-const pitch = 60
-const bearing = -178.6
 maplibregl.addProtocol('pmtiles', (new pmtiles.Protocol()).tile)
 const map = new maplibregl.Map({
-  container: 'map', style: 'style.json', 
-  center: latlng, zoom: zoom, pitch: pitch, bearing: bearing,
-  hash: true
+  container: 'map', style: 'style.json', hash: true
 })
 map.addControl(new maplibregl.NavigationControl())
 map.addControl(new maplibregl.GlobeControl())
+map.on('load', () => {
+  map.addSource('gel', {
+    type: "raster-dem",
+    tiles: [
+      "pmtiles://https://data.source.coop/smartmaps/gel/gel.pmtiles/{z}/{x}/{y}.webp"
+    ],
+    tileSize: 512,
+    minzoom: 2,
+    maxzoom: 12
+  })
+  map.addControl(new maplibregl.TerrainControl({ "source": "gel" }))
+})
 </script>
 </body>
 </html>
